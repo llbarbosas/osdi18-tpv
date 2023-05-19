@@ -1,0 +1,16 @@
+version: "3.9"
+
+name: "osdi18-tpv" 
+
+services: 
+  jupyter-lab:
+    container_name: jupyter-lab
+    build: ./jupyter-lab
+    ports: 
+      - "8888:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+    command: start-notebook.sh --NotebookApp.token=''
+    volumes:
+      - ../notebooks:/home/jovyan/work/notebooks:z
+      - ../data:/home/jovyan/work/data:z
