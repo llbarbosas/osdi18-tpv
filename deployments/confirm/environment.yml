@@ -1,0 +1,11 @@
+name: py2
+dependencies:
+  - python=2.7
+  - pip:
+      - pandas==0.20.3
+      - bokeh==0.12.10
+      - tornado==4.5.2
+      - seaborn==0.8
+      - numpy==1.13.3
+      - phantomjs==1.4.1
+      - selenium==3.141.0

@@ -14,3 +14,16 @@ services:
     volumes:
       - ../notebooks:/home/jovyan/work/notebooks:z
       - ../data:/home/jovyan/work/data:z
+  benchmarks:
+    container_name: benchmarks
+    build: ./benchmarks
+    volumes:
+      - ../benchmarks:/app:z
+      - ../benchmarks/output/:/root/:z
+  confirm:
+    container_name: confirm
+    build: ./confirm
+    ports:
+      - 5006:5006 
+    volumes:
+      - ../confirm:/confirm:z
